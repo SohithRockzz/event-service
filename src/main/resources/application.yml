@@ -1,0 +1,18 @@
+server:
+     port: 9001
+amazon:
+  dynamodb:
+    endpoint: http://localhost:8000/
+  aws:
+    accesskey: fakeAccessKeyId
+    secretkey: fakeSecretAccessKey
+spring:
+  data:
+    dynamodb:
+      entity2ddl:
+        auto: create-only
+        gsiProjectionType: ALL
+        readCapacity: 10
+        writeCapacity: 1
+core:
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin, Va
